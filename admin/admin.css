@@ -1,0 +1,96 @@
+/* ===== Admin Input ===== */
+.admin-input {
+    width: 100%; padding: 10px 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; color: #fff;
+    font-size: 14px; outline: none;
+    transition: border-color 0.3s;
+}
+.admin-input:focus { border-color: rgba(59,130,246,0.5); }
+.admin-input::placeholder { color: #6b7280; }
+textarea.admin-input { resize: vertical; min-height: 80px; }
+select.admin-input { appearance: none; cursor: pointer; }
+
+/* ===== Nav Buttons ===== */
+.admin-nav-btn {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; padding: 10px 14px; border-radius: 10px;
+    font-size: 14px; font-weight: 500; color: #9ca3af;
+    transition: all 0.2s; text-align: left; background: none; border: none; cursor: pointer;
+}
+.admin-nav-btn:hover { color: #fff; background: rgba(255,255,255,0.05); }
+.admin-nav-btn.active {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15));
+    border: 1px solid rgba(59,130,246,0.2);
+}
+
+/* ===== Tabs ===== */
+.admin-tab { display: none; }
+.admin-tab.active { display: block; }
+
+/* ===== Form Card ===== */
+.admin-form-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px; padding: 24px;
+    max-width: 600px;
+}
+
+/* ===== Add Button ===== */
+.admin-add-btn {
+    padding: 8px 18px; border-radius: 10px; font-size: 13px; font-weight: 600;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: #fff; border: none; cursor: pointer;
+    transition: opacity 0.2s;
+}
+.admin-add-btn:hover { opacity: 0.9; }
+
+/* ===== Save Button ===== */
+.admin-save-btn {
+    width: 100%; padding: 12px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border: none; border-radius: 12px;
+    color: #fff; font-weight: 600; font-size: 14px;
+    cursor: pointer; transition: opacity 0.2s;
+}
+.admin-save-btn:hover { opacity: 0.9; }
+
+/* ===== List Item ===== */
+.admin-list-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px; padding: 16px;
+    transition: border-color 0.2s;
+}
+.admin-list-item:hover { border-color: rgba(255,255,255,0.1); }
+.admin-list-actions {
+    display: flex; gap: 8px;
+}
+.admin-list-actions button {
+    width: 34px; height: 34px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: none; color: #9ca3af; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; transition: all 0.2s;
+}
+.admin-list-actions .edit-btn:hover { color: #3b82f6; border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.1); }
+.admin-list-actions .delete-btn:hover { color: #ef4444; border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.1); }
+
+/* ===== Toast ===== */
+#adminToast.show { transform: translateX(0); }
+
+/* ===== Responsive ===== */
+@media (max-width: 1023px) {
+    #sidebar.open { transform: translateX(0); }
+}
+
+/* ===== List Item Image Hover ===== */
+.admin-list-item img {
+    transition: transform 0.3s ease;
+}
+.admin-list-item:hover img {
+    transform: scale(1.1);
+}
